@@ -1,9 +1,9 @@
 #ifndef PARAMETERVISITOR_HPP
 #define PARAMETERVISITOR_HPP
 
-#include "Parameters/intparameter.hpp"
-#include "Parameters/realparameter.hpp"
-#include "Parameters/flagparameter.hpp"
+#include "parameters/intparameter.hpp"
+#include "parameters/realparameter.hpp"
+#include "parameters/flagparameter.hpp"
 
 class ParameterVisitor
 {
