@@ -8,6 +8,9 @@ class FlagParameter : public Parameter
 public:
     explicit FlagParameter(const std::string &name, bool value);
 
+    FlagParameter &operator=(bool value);
+    operator bool() const;
+
     bool getValue() const;
     void setValue(bool value);
 

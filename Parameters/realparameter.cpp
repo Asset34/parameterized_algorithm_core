@@ -10,6 +10,18 @@ RealParameter::RealParameter(const std::string &name, double min, double max, do
 {
 }
 
+RealParameter &RealParameter::operator=(double value)
+{
+    m_value = value;
+
+    return *this;
+}
+
+RealParameter::operator double() const
+{
+    return m_value;
+}
+
 double RealParameter::getMin() const
 {
     return m_min;

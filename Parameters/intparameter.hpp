@@ -8,6 +8,9 @@ class IntParameter : public Parameter
 public:
     explicit IntParameter(const std::string &name, int min, int max, int value);
 
+    IntParameter &operator=(int value);
+    operator int() const;
+
     int getMin() const;
     int getMax() const;
 

@@ -10,6 +10,18 @@ IntParameter::IntParameter(const std::string &name, int min, int max, int value)
 {
 }
 
+IntParameter &IntParameter::operator=(int value)
+{
+    m_value = value;
+
+    return *this;
+}
+
+IntParameter::operator int() const
+{
+    return m_value;
+}
+
 int IntParameter::getMin() const
 {
     return m_min;

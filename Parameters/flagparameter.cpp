@@ -8,6 +8,18 @@ FlagParameter::FlagParameter(const std::string &name, bool value)
 {
 }
 
+FlagParameter &FlagParameter::operator=(bool value)
+{
+    m_value = value;
+
+    return *this;
+}
+
+FlagParameter::operator bool() const
+{
+    return m_value;
+}
+
 bool FlagParameter::getValue() const
 {
     return m_value;

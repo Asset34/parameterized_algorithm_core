@@ -8,6 +8,9 @@ class RealParameter : public Parameter
 public:
     explicit RealParameter(const std::string &name, double min, double max, double value);
 
+    RealParameter &operator=(double value);
+    operator double() const;
+
     double getMin() const;
     double getMax() const;
 
