@@ -15,3 +15,8 @@ void FlagParameter::setValue(bool value)
 {
     m_value = value;
 }
+
+FlagParameter::accept(ParameterVisitor &visitor)
+{
+    // TODO
+}

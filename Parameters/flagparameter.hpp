@@ -11,6 +11,8 @@ public:
     bool getValue() const;
     void setValue(bool value);
 
+    virtual accept(ParameterVisitor &visitor) override;
+
 private:
     bool m_value;
 
