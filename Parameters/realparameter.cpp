@@ -1,5 +1,7 @@
 #include "realparameter.hpp"
 
+#include "../parametervisitor.hpp"
+
 RealParameter::RealParameter(const std::string &name, double min, double max, double value)
     : Parameter(name),
       m_min(min),
@@ -28,7 +30,7 @@ void RealParameter::setValue(int value)
     m_value = value;
 }
 
-RealParameter::accept(ParameterVisitor &visitor)
+void RealParameter::accept(ParameterVisitor &visitor)
 {
-    // TODO
+    visitor.visit(*this);
 }

@@ -1,5 +1,7 @@
 #include "flagparameter.hpp"
 
+#include "../parametervisitor.hpp"
+
 FlagParameter::FlagParameter(const std::string &name, bool value)
     : Parameter(name),
       m_value(value)
@@ -16,7 +18,7 @@ void FlagParameter::setValue(bool value)
     m_value = value;
 }
 
-FlagParameter::accept(ParameterVisitor &visitor)
+void FlagParameter::accept(ParameterVisitor &visitor)
 {
-    // TODO
+    visitor.visit(*this);
 }

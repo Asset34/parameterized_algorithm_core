@@ -13,7 +13,7 @@ public:
 
     const std::string &getName() const;
 
-    virtual accept(ParameterVisitor &visitor) = 0;
+    virtual void accept(ParameterVisitor &visitor) = 0;
 
 private:
     std::string m_name;

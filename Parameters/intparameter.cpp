@@ -1,5 +1,7 @@
 #include "intparameter.hpp"
 
+#include "../parametervisitor.hpp"
+
 IntParameter::IntParameter(const std::string &name, int min, int max, int value)
     : Parameter(name),
       m_min(min),
@@ -28,7 +30,7 @@ void IntParameter::setValue(int value)
     m_value = value;
 }
 
-IntParameter::accept(ParameterVisitor &visitor)
+void IntParameter::accept(ParameterVisitor &visitor)
 {
-    // TODO
+    visitor.visit(*this);
 }

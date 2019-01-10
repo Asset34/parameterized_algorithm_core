@@ -14,7 +14,7 @@ public:
     double getValue() const;
     void setValue(int value);
 
-    virtual accept(ParameterVisitor &visitor) override;
+    virtual void accept(ParameterVisitor &visitor) override;
 
 private:
     double m_min;
