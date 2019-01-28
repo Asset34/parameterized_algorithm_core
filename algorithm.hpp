@@ -12,7 +12,7 @@ public:
     virtual ~Algorithm() = default;
 
     virtual std::string getName() const = 0;
-    virtual std::vector<Parameter*> getParameters() = 0;
+    virtual std::vector<Parameter*> getParameters() const = 0;
 
 };
 
