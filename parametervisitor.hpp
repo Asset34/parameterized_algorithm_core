@@ -4,13 +4,15 @@
 #include "parameters/intparameter.hpp"
 #include "parameters/realparameter.hpp"
 #include "parameters/flagparameter.hpp"
+#include "parameters/compositeparameter.hpp"
 
 class ParameterVisitor
 {
 public:
-    virtual void visit(IntParameter  &p) = 0;
-    virtual void visit(RealParameter &p) = 0;
-    virtual void visit(FlagParameter &p) = 0;
+    virtual void visit(IntParameter       &p) = 0;
+    virtual void visit(RealParameter      &p) = 0;
+    virtual void visit(FlagParameter      &p) = 0;
+    virtual void visit(CompositeParameter &p) = 0;
 
 };
 
